@@ -21,6 +21,15 @@
             <li class="nav-item">
               <RouterLink class="nav-link" to="/type">Types</RouterLink>
             </li>
+            <li class="nav-item">
+              <RouterLink class="nav-link" to="/state">States</RouterLink>
+            </li>
+            <li class="nav-item">
+              <RouterLink class="nav-link" to="/manufacturer">Manufacturer</RouterLink>
+            </li>
+            <li class="nav-item">
+              <RouterLink class="nav-link" to="/customer">Customer</RouterLink>
+            </li>
           </ul>
           <span class="navbar-text">
             Korisnik 123
