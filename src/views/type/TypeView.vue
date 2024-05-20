@@ -38,7 +38,7 @@ async function removeType(model: TypeModel) {
                     <td>
                         <div class="btn-group">
                             <RouterLink class="btn btn-sm btn-primary" :to="`/type/${obj.typeId}`">
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i class="fa-solid fa-pen-to-square"></i>
                             </RouterLink>
                             <button type="button" class="btn btn-sm btn-danger" @click="removeType(obj)">
                                 <i class="fa-solid fa-trash"></i>

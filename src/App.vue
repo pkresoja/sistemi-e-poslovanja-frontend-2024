@@ -19,16 +19,27 @@
               <RouterLink class="nav-link" to="/">Home</RouterLink>
             </li>
             <li class="nav-item">
-              <RouterLink class="nav-link" to="/type">Types</RouterLink>
+              <RouterLink class="nav-link" to="/customer">Customers</RouterLink>
             </li>
-            <li class="nav-item">
-              <RouterLink class="nav-link" to="/state">States</RouterLink>
-            </li>
-            <li class="nav-item">
-              <RouterLink class="nav-link" to="/manufacturer">Manufacturer</RouterLink>
-            </li>
-            <li class="nav-item">
-              <RouterLink class="nav-link" to="/customer">Customer</RouterLink>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Other
+              </a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-item">
+                  <RouterLink class="nav-link" to="/type">Types</RouterLink>
+                </li>
+                <li class="dropdown-item">
+                  <RouterLink class="nav-link" to="/state">States</RouterLink>
+                </li>
+                <li class="dropdown-item">
+                  <RouterLink class="nav-link" to="/manufacturer">Manufacturers</RouterLink>
+                </li>
+                <li class="dropdown-item">
+                  <RouterLink class="nav-link" to="/model">Models</RouterLink>
+                </li>
+              </ul>
             </li>
           </ul>
           <span class="navbar-text">

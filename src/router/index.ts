@@ -12,6 +12,12 @@ import EditManufacturer from '@/views/manufacturer/EditManufacturer.vue'
 import CustomerView from '@/views/customer/CustomerView.vue'
 import NewCustomer from '@/views/customer/NewCustomer.vue'
 import EditCustomer from '@/views/customer/EditCustomer.vue'
+import ModelView from '@/views/model/ModelView.vue'
+import NewModel from '@/views/model/NewModel.vue'
+import EditModel from '@/views/model/EditModel.vue'
+import DeviceView from '@/views/device/DeviceView.vue'
+import NewDevice from '@/views/device/NewDevice.vue'
+import EditDevice from '@/views/device/EditDevice.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -80,6 +86,36 @@ const router = createRouter({
       path: '/customer/:id',
       name: 'edit-customer',
       component: EditCustomer
+    },
+    {
+      path: '/model',
+      name: 'model',
+      component: ModelView
+    },
+    {
+      path: '/model/new',
+      name: 'new-model',
+      component: NewModel
+    },
+    {
+      path: '/model/:id',
+      name: 'edit-model',
+      component: EditModel
+    },
+    {
+      path: '/customer/:id/device',
+      name: 'device',
+      component: DeviceView
+    },
+    {
+      path: '/customer/:id/device/new',
+      name: 'new-device',
+      component: NewDevice
+    },
+    {
+      path: '/device/:id',
+      name: 'edit-device',
+      component: EditDevice
     },
   ]
 })

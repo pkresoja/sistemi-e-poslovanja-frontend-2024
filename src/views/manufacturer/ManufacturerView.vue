@@ -42,7 +42,7 @@ async function removeManufacturer(model: ManufacturerModel) {
                     <td>
                         <div class="btn-group">
                             <RouterLink class="btn btn-sm btn-primary" :to="`/manufacturer/${obj.manufacturerId}`">
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i class="fa-solid fa-pen-to-square"></i>
                             </RouterLink>
                             <button type="button" class="btn btn-sm btn-danger" @click="removeManufacturer(obj)">
                                 <i class="fa-solid fa-trash"></i>

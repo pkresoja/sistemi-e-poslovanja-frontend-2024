@@ -38,7 +38,7 @@ async function removeState(model: StateModel) {
                     <td>
                         <div class="btn-group">
                             <RouterLink class="btn btn-sm btn-primary" :to="`/state/${obj.stateId}`">
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i class="fa-solid fa-pen-to-square"></i>
                             </RouterLink>
                             <button type="button" class="btn btn-sm btn-danger" @click="removeState(obj)">
                                 <i class="fa-solid fa-trash"></i>

@@ -44,7 +44,10 @@ async function removeCustomer(model: CustomerModel) {
                     <td>
                         <div class="btn-group">
                             <RouterLink class="btn btn-sm btn-primary" :to="`/customer/${obj.customerId}`">
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </RouterLink>
+                            <RouterLink class="btn btn-sm btn-success" :to="`/customer/${obj.customerId}/device`">
+                                <i class="fa-solid fa-list-ul"></i>
                             </RouterLink>
                             <button type="button" class="btn btn-sm btn-danger" @click="removeCustomer(obj)">
                                 <i class="fa-solid fa-trash"></i>
