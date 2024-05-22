@@ -1,11 +1,13 @@
 import axios, { AxiosError, type AxiosResponse } from "axios";
 import { AuthService } from "./auth.service";
+import type { UserModel } from "@/models/user.model";
 
 const client = axios.create({
     baseURL: 'http://localhost:4000/api',
     headers: {
         'Accept': 'application/json'
     },
+    timeout: 3000,
     validateStatus: (status) => {
         return status.toString().startsWith('2')
     }
@@ -43,7 +45,6 @@ export async function useAxios(path: string, method = 'get', payload = {}) {
 
     if (rsp == undefined || rsp.status == 401) {
         window.location.href = "/login"
-        return
     }
 
     if (rsp.status == 403) {
@@ -84,4 +85,9 @@ export async function useAxios(path: string, method = 'get', payload = {}) {
 export function formatDate(iso: string) {
     if (iso == null) return 'N/A'
     return new Date(iso).toLocaleString('sr-RS')
+}
+
+export function formatUser(user: UserModel) {
+    if (user == null) return 'N/A'
+    return user.username
 }

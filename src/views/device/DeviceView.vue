@@ -22,13 +22,10 @@ async function removeDevice(model: DeviceModel) {
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <RouterLink to="/">Home</RouterLink>
-                </li>
-                <li class="breadcrumb-item">
                     <RouterLink to="/customer">Customer</RouterLink>
                 </li>
                 <li class="breadcrumb-item">
-                    <RouterLink :to="`/customer/${id}`">{{ String(id).padStart(4, '0') }}</RouterLink>
+                    <RouterLink :to="`/customer/${id}/device`">{{ String(id).padStart(4, '0') }}</RouterLink>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">Devices</li>
             </ol>
@@ -75,6 +72,10 @@ async function removeDevice(model: DeviceModel) {
                         <div class="btn-group">
                             <RouterLink class="btn btn-sm btn-primary" :to="`/device/${obj.deviceId}`">
                                 <i class="fa-solid fa-pen-to-square"></i>
+                            </RouterLink>
+                            <RouterLink class="btn btn-sm btn-success"
+                                :to="`/customer/${id}/device/${obj.deviceId}/service`">
+                                <i class="fa-solid fa-list-ul"></i>
                             </RouterLink>
                             <button type="button" class="btn btn-sm btn-danger" @click="removeDevice(obj)">
                                 <i class="fa-solid fa-trash"></i>
