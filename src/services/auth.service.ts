@@ -20,6 +20,10 @@ export class AuthService {
         return this.getAuth().refresh
     }
 
+    public static getUsername() {
+        return this.getAuth().username
+    }
+
     public static hasAuth() {
         return localStorage.getItem('auth') != undefined
     }

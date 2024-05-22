@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 import TypeView from '@/views/type/TypeView.vue'
 import EditType from '@/views/type/EditType.vue'
 import NewType from '@/views/type/NewType.vue'
@@ -25,8 +24,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: HomeView
+      redirect: '/customer'
     },
     {
       path: '/login',
