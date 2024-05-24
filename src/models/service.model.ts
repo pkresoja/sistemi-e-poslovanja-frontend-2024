@@ -4,6 +4,7 @@ import type { UserModel } from "./user.model"
 
 export interface ServiceModel {
     serviceId: number
+    code: string
     deviceId: number
     stateId: number
     createdAt: string

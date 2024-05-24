@@ -49,6 +49,7 @@ async function removeService(model: ServiceModel) {
             <thead>
                 <tr>
                     <th scope="col">#</th>
+                    <th scope="col">Code</th>
                     <th scope="col">State</th>
                     <th scope="col">Created At</th>
                     <th scope="col">Created By</th>
@@ -60,6 +61,7 @@ async function removeService(model: ServiceModel) {
             <tbody>
                 <tr v-for="obj in services">
                     <th scope="row">{{ obj.serviceId }}</th>
+                    <th scope="row">{{ obj.code }}</th>
                     <td>
                         <RouterLink :to="`/model/${obj.state.stateId}`">
                             {{ obj.state.name }}

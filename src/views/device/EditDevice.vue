@@ -29,7 +29,7 @@ const customers = ref<CustomerModel[]>()
 CustomerService.getAllCustomers()
     .then(rsp => customers.value = rsp.data)
 
-function updatDevice() {
+function updateDevice() {
     DeviceService.updateDevice(id, device.value).then(rsp => {
         router.push({
             path: `/customer/${device.value?.customerId}/device`
@@ -77,7 +77,7 @@ function updatDevice() {
             <label for="updated" class="form-label">Updated At:</label>
             <input type="text" class="form-control" id="updated" :value="formatDate(device.updatedAt)" disabled>
         </div>
-        <button type="button" class="btn btn-success" @click="updatDevice">
+        <button type="button" class="btn btn-success" @click="updateDevice">
             <i class="fa-solid fa-save"></i> Save
         </button>
     </div>

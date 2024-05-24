@@ -1,3 +1,4 @@
+import type { CustomerModel } from "./customer.model"
 import type { ModelModel } from "./model.model"
 
 export interface DeviceModel {
@@ -8,4 +9,5 @@ export interface DeviceModel {
     createdAt: string
     updatedAt: string
     model: ModelModel
+    customer: CustomerModel
 }

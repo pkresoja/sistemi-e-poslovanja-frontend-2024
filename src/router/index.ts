@@ -20,6 +20,8 @@ import EditDevice from '@/views/device/EditDevice.vue'
 import LoginView from '@/views/LoginView.vue'
 import ServiceView from '@/views/service/ServiceView.vue'
 import NewService from '@/views/service/NewService.vue'
+import EditService from '@/views/service/EditService.vue'
+import SearchView from '@/views/SearchView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -132,6 +134,16 @@ const router = createRouter({
       path: '/customer/:customer/device/:device/service/new',
       name: 'new-service',
       component: NewService
+    },
+    {
+      path: '/service/:id',
+      name: 'edit-service',
+      component: EditService
+    },
+    {
+      path: '/search',
+      name: 'search',
+      component: SearchView
     },
   ]
 })

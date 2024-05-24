@@ -9,6 +9,10 @@ export class ServiceService {
         return await useAxios(`/service/${id}`)
     }
 
+    static async getServiceByCode(code: string) {
+        return await useAxios(`/service/code/${code}`)
+    }
+
     static async saveService(data: any) {
         return await useAxios('/service', 'post', data)
     }
