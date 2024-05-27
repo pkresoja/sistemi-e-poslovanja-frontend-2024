@@ -3,7 +3,7 @@ import { AuthService } from "./auth.service";
 import type { UserModel } from "@/models/user.model";
 
 const client = axios.create({
-    baseURL: 'http://localhost:4000/api',
+    baseURL: import.meta.env.VITE_API_BASE_URL,
     headers: {
         'Accept': 'application/json'
     },
